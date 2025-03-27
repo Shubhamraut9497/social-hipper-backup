@@ -13,7 +13,7 @@ const SignUpForm: React.FC = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const [captchaChecked, setCaptchaChecked] = useState<boolean>(false);
+  const [captchaChecked, ] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -28,6 +28,7 @@ const SignUpForm: React.FC = () => {
   const [isVerifying, setIsVerifying] = useState<boolean>(false);
   const inputRefs = useRef<HTMLInputElement[]>([]);
   const router = useRouter();
+  console.log(captchaToken);
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();

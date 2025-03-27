@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import SearchResults from "../SearchResult/SearchResult";
-import { Search } from "lucide-react";
+
 
 // Define types for YouTube API response items
 interface YouTubeItem {
@@ -27,8 +26,8 @@ interface YouTubeResult {
 
 const Banner = () => {
   const [query, setQuery] = useState<string>("");
-  const [results, setResults] = useState<YouTubeResult[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [, setResults] = useState<YouTubeResult[]>([]);
+  const [, setLoading] = useState<boolean>(false);
 
   // Function to fetch YouTube data
   const searchYouTube = async (searchQuery: string) => {
