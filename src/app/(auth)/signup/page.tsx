@@ -13,7 +13,6 @@ const SignUpForm: React.FC = () => {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [showPassword, setShowPassword] = useState<boolean>(false);
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
-  const [captchaChecked, ] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -218,11 +217,11 @@ const SignUpForm: React.FC = () => {
                   type="submit"
                   className={`w-1/2 mt-4 text-white py-6 rounded-[36px] font-semibold 
                     ${
-                      captchaChecked && email && username && password
+                     email && username && password
                         ? "bg-black dark:bg-white dark:text-black opacity-100"
                         : "bg-gray-400 opacity-40"
                     }`}
-                  disabled={!captchaChecked}
+                  
                 >
                   Create an Account
                 </Button>
